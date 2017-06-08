@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{12013378-deed-45a5-baf9-a361d8fb70b0}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{dd96952f-5af3-454e-b659-844738d186f6}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{8795fbc1-82ef-414b-9354-07b8ffdf95db}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{aae0cb2f-954a-4565-8796-7e724fbea80c}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Term.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\ra8875.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\SPI.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Term-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="Term-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lib\ra8875.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\ra8875_regs.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\SPI.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\def.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

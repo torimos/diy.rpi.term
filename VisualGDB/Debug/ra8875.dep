@@ -1,0 +1,67 @@
+VisualGDB/Debug/ra8875.o: Lib/ra8875.cpp \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdc-predef.h \
+ Lib/ra8875.h Lib/SPI.h Lib/def.h Lib/ra8875_regs.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdio.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\features.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wordsize.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs-hard.h \
+ c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stddef.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\types.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\libio.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\_g_config.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\wchar.h \
+ c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\string.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\xlocale.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/local/include/wiringPi.h
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdc-predef.h:
+
+Lib/ra8875.h:
+
+Lib/SPI.h:
+
+Lib/def.h:
+
+Lib/ra8875_regs.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdio.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\features.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wordsize.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs-hard.h:
+
+c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stddef.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\types.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\libio.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\_g_config.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\wchar.h:
+
+c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\string.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\xlocale.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/local/include/wiringPi.h:

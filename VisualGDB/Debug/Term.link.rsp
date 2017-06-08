@@ -1,0 +1,1 @@
+-o VisualGDB/Debug/Term -Wl,-gc-sections  -Wl,--start-group VisualGDB/Debug/ra8875.o VisualGDB/Debug/SPI.o VisualGDB/Debug/Term.o -lpthread -lwiringPi -lbcm2835 -Wl,--rpath='$ORIGIN' -Wl,--end-group
