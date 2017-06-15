@@ -14,38 +14,47 @@
 #define SPI_HIGH_SPEED 1
 #define SPI_LOW_SPEED 0
 
-RA8875::RA8875(SPI* spi, uint32_t resetPin)
+RA8875::RA8875(uint8_t spiChannel, uint32_t resetPin)
 {
 	_resetPin = resetPin;
-	_spi = spi;
+	_spi = new SPIdev(spiChannel);
+	_textScale = 0;
 }
 
 RA8875::~RA8875()
 {
+	delete _spi;
 }
 
 void RA8875::writeData(uint8_t data)
 {
-	_textScale = 0;
 	_spi->begin();
-	_spi->transfer(RA8875_DATAWRITE);
-	_spi->transfer(data);
+	_spi->write8(RA8875_DATAWRITE, true);
+	_spi->write8(data, false);
+	_spi->end();
+}
+
+void RA8875::writeData(uint8_t* data, uint32_t dataSize)
+{
+	_spi->begin();
+	_spi->write8(RA8875_DATAWRITE, true);
+	_spi->write(data, dataSize, false);
 	_spi->end();
 }
 
 void RA8875::writeCommand(uint8_t cmd)
 {
 	_spi->begin();
-	_spi->transfer(RA8875_CMDWRITE);
-	_spi->transfer(cmd);
+	_spi->write8(RA8875_CMDWRITE, true);
+	_spi->write8(cmd, false);
 	_spi->end();
 }
 
 uint8_t RA8875::readData(void)
 {
 	_spi->begin();
-	_spi->transfer(RA8875_DATAREAD);
-	uint8_t r = _spi->transfer(0x0);
+	_spi->write8(RA8875_DATAREAD, true);
+	uint8_t r =  _spi->write8(0, false);
 	_spi->end();
 	return r;
 }
@@ -53,8 +62,8 @@ uint8_t RA8875::readData(void)
 uint8_t RA8875::readStatus(void)
 {
 	_spi->begin();
-	_spi->transfer(RA8875_CMDREAD);
-	uint8_t r = _spi->transfer(0x0);
+	_spi->write8(RA8875_CMDREAD, true);
+	uint8_t r = _spi->write8(0, false);
 	_spi->end();
 	return r;
 }
@@ -81,7 +90,9 @@ uint8_t RA8875::readReg(uint8_t reg)
 
 bool RA8875::spiInit(uint32_t speed)
 {
-	return _spi->initialize(SPIDataModeEnum::MODE_0, SPIBitSizeOrderEnum::SPI_8BIT_MSB, speed ? SPIClockDividerEnum::CLOCK_DIVIDER_16 : SPIClockDividerEnum::CLOCK_DIVIDER_512);
+	return _spi->initialize(SPIDataModeEnum::MODE_0, SPIBitSizeOrderEnum::SPI_8BIT_MSB, speed 
+		? SPIClockDividerEnum::CLOCK_DIVIDER_16 
+		: SPIClockDividerEnum::CLOCK_DIVIDER_512);
 }
 
 bool RA8875::PLLinit(void)
@@ -178,7 +189,8 @@ bool RA8875::initialize(uint8_t mode)
 
 	writeReg(RA8875_SYSR, RA8875_SYSR_16BPP | RA8875_SYSR_MCU8);
 	writeReg(RA8875_PCSR, pixclk);
-
+	delay(1);
+	
 	/* Horizontal settings registers */
 	writeReg(RA8875_HDWR, (_width / 8) - 1);                          // H width: (HDWR + 1) * 8 = 480
 	writeReg(RA8875_HNDFTR, RA8875_HNDFTR_DE_HIGH + hsync_finetune);
@@ -196,16 +208,17 @@ bool RA8875::initialize(uint8_t mode)
 	
 	setActiveWindow(0, 0, _width - 1, _height - 1);
 
-	setFontSource(RA8875FontSourceEnum::INT_CGROM);
-	selectMemory(RA8875MemoryEnum::Layer1);
+	clearMemory(true);
 	setCursorBlinkRate(255);
 	showCursor(false, false);
-
-	clearMemory(true);
-	displayOn(true);
+	setFontSource(RA8875FontSourceEnum::INT_CGROM);
+	selectMemory(RA8875MemoryEnum::Layer1);
+	
+	touchEnable(false);
+	
 	PWM1config(true, RA8875_PWM_CLK_DIV1024);
 	PWM1out(255);
-
+	displayOn(true);
 	return true;
 }
 
@@ -367,7 +380,6 @@ void RA8875::textWrite(int x, int y, const char *str, ...)
 	va_end(ap);
 	textSetCursor(x, y);
 	char *t = _textBuffer;
-
 	writeCommand(RA8875_MRWC);
 	while (*t != 0)
 	{
@@ -399,6 +411,7 @@ void RA8875::showCursor(bool show, bool blink)
 	if (blink) temp |= (1 << 5);
 	else temp &= ~(1 << 5);
 	writeReg(RA8875_MWCR0, temp);
+	writeReg(RA8875_MWCR1, 0);
 	if (show)
 	{
 		curh = 0x07;
@@ -427,20 +440,14 @@ void RA8875::drawPixel(int16_t x, int16_t y, uint16_t color)
 	writeReg16(RA8875_CURV0, y);
 
 	writeCommand(RA8875_MRWC);
-	_spi->begin();
-	_spi->transfer(RA8875_DATAWRITE);
-	_spi->write((uint8_t*)&color, 2);
-	_spi->end();
+	writeData(color);
 }
 
 void RA8875::drawImage(uint16_t *addr, uint16_t x, uint16_t y, uint16_t w, uint16_t h)
 {
 	setActiveWindow(x, y, x + w - 1, y + h-1);
 	writeCommand(RA8875_MRWC);
-	_spi->begin();
-	_spi->transfer(RA8875_DATAWRITE);
-	_spi->write((uint8_t*)addr, w*h << 1);
-	_spi->end();
+	writeData((uint8_t*)addr, w*h << 1);
 }
 
 void RA8875::rectHelper(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color, bool filled)

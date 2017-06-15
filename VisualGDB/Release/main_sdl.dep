@@ -1,0 +1,214 @@
+VisualGDB/Release/main_sdl.o: main_sdl.cpp \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/features.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wordsize.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs-hard.h \
+ c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stddef.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\types.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/libio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/_G_config.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/wchar.h \
+ c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_main.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_stdinc.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_config.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_platform.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\types.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/time.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/endian.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\endian.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap-16.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\select.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\select.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sigset.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\time.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\sysmacros.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\pthreadtypes.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdlib.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitflags.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitstatus.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/alloca.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-bsearch.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-float.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/string.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/strings.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/inttypes.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdint.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wchar.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/ctype.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/iconv.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/begin_code.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/close_code.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_audio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_error.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_endian.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_mutex.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_thread.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_rwops.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_cdrom.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_cpuinfo.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_events.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_active.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_keyboard.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_keysym.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_mouse.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_video.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_joystick.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_quit.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_loadso.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_timer.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_version.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_ttf.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL.h
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdio.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/features.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wordsize.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs-hard.h:
+
+c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stddef.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\types.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/libio.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/_G_config.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/wchar.h:
+
+c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_main.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_stdinc.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_config.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_platform.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\types.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/time.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/endian.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\endian.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap-16.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\select.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\select.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sigset.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\time.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\sysmacros.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\pthreadtypes.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdlib.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitflags.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitstatus.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/alloca.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-bsearch.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-float.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/string.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/strings.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/inttypes.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdint.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wchar.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/ctype.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/iconv.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/begin_code.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/close_code.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_audio.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_error.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_endian.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_mutex.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_thread.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_rwops.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_cdrom.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_cpuinfo.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_events.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_active.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_keyboard.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_keysym.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_mouse.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_video.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_joystick.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_quit.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_loadso.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_timer.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_version.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL_ttf.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/SDL/SDL.h:

@@ -1,0 +1,6 @@
+﻿  ra8875.cpp
+  SPI.cpp
+  main_direct.cpp
+  main_sdl.cpp
+  Term.cpp
+  Linking VisualGDB/Release/Term...

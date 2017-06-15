@@ -1,9 +1,9 @@
 VisualGDB/Debug/Term.o: Term.cpp \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdc-predef.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdc-predef.h \
  c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/local/include/wiringPi.h \
  Lib/SPI.h Lib/def.h Lib/ra8875.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdlib.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\features.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdlib.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/features.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\wordsize.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\gnu\stubs.h \
@@ -11,32 +11,33 @@ VisualGDB/Debug/Term.o: Term.cpp \
  c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stddef.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitflags.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitstatus.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\endian.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/endian.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\endian.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\types.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap-16.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\xlocale.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\types.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\time.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/time.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\select.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\select.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sigset.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\time.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\sysmacros.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\pthreadtypes.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\alloca.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/alloca.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-float.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdio.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\libio.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\_g_config.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\wchar.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/libio.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/_G_config.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/wchar.h \
  c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h \
- c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\timex.h
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdc-predef.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
 
 c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/local/include/wiringPi.h:
 
@@ -46,9 +47,9 @@ Lib/def.h:
 
 Lib/ra8875.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdlib.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdlib.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\features.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/features.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\cdefs.h:
 
@@ -64,7 +65,7 @@ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitflags.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\waitstatus.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\endian.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/endian.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\endian.h:
 
@@ -76,11 +77,11 @@ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\typesizes.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\byteswap-16.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\xlocale.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\types.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\time.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/time.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\select.h:
 
@@ -94,20 +95,22 @@ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\sys\sysmacros.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\pthreadtypes.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\alloca.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/alloca.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdlib-float.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\stdio.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdio.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\libio.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/libio.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\_g_config.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/_G_config.h:
 
-c:\sysgcc\raspberry\arm-linux-gnueabihf\sysroot\usr\include\wchar.h:
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/wchar.h:
 
 c:\sysgcc\raspberry\lib\gcc\arm-linux-gnueabihf\4.9\include\stdarg.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h:
 
 c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\timex.h:

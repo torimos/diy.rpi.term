@@ -1,0 +1,1 @@
+-o VisualGDB/Release/Term -Wl,-gc-sections  -Wl,--start-group VisualGDB/Release/ra8875.o VisualGDB/Release/SPI.o VisualGDB/Release/main_direct.o VisualGDB/Release/main_sdl.o VisualGDB/Release/Term.o -lpthread -lwiringPi -lbcm2835 -lsdl -lsdl_ttf -Wl,--rpath='$ORIGIN' -Wl,--end-group

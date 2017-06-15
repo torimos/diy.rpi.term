@@ -1,1 +1,1 @@
--I=/usr/local/include/ -ILib -ggdb -O0 -DDEBUG=1 -DDEBUG=1 -ffunction-sections -fdata-sections -std=gnu++11 -c "Lib/SPI.cpp" -o "VisualGDB/Debug/SPI.o" -MD -MP -MF "VisualGDB/Debug/SPI.dep"
+-I=/usr/local/include/ -I=/usr/include/ -ILib -ggdb -O0 -DDEBUG=1 -DDEBUG=1 -ffunction-sections -fdata-sections -std=gnu++11 -c "Lib/SPI.cpp" -o "VisualGDB/Debug/SPI.o" -MD -MP -MF "VisualGDB/Debug/SPI.dep"

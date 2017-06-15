@@ -1,0 +1,1 @@
+-I=/usr/local/include/ -I=/usr/include/ -ILib -ggdb -O3 -DNDEBUG=1 -DRELEASE=1 -DNDEBUG=1 -DRELEASE=1 -ffunction-sections -fdata-sections -std=gnu++11 -c "Lib/ra8875.cpp" -o "VisualGDB/Release/ra8875.o" -MD -MP -MF "VisualGDB/Release/ra8875.dep"

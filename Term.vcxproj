@@ -31,35 +31,57 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <ClCompile>
       <CPPLanguageStandard>GNUPP11</CPPLanguageStandard>
-      <AdditionalIncludeDirectories>=/usr/local/include/;Lib;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>=/usr/local/include/;=/usr/include/;Lib;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
       <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
-      <AdditionalLibraryNames>pthread;wiringPi;bcm2835;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLibraryNames>pthread;wiringPi;bcm2835;sdl;sdl_ttf;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
       <LinkerScript />
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
     <ClCompile>
       <CPPLanguageStandard>GNUPP11</CPPLanguageStandard>
+      <AdditionalIncludeDirectories>=/usr/local/include/;=/usr/include/;Lib;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG=1;RELEASE=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>pthread;wiringPi;bcm2835;sdl;sdl_ttf;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lib\ADS1x15.cpp" />
+    <ClCompile Include="Lib\ADXL345.cpp" />
+    <ClCompile Include="Lib\BMP085.cpp" />
+    <ClCompile Include="Lib\HMC5883L.cpp" />
+    <ClCompile Include="Lib\I2Cdev.cpp" />
+    <ClCompile Include="Lib\ITG3200.cpp" />
     <ClCompile Include="Lib\ra8875.cpp" />
-    <ClCompile Include="Lib\SPI.cpp" />
-    <ClCompile Include="Term.cpp" />
+    <ClCompile Include="Lib\SPIdev.cpp" />
+    <ClCompile Include="main_direct.cpp" />
+    <ClCompile Include="main_sdl.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Term-Debug.vgdbsettings" />
     <None Include="Term-Release.vgdbsettings" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Lib\ADS1x15.h" />
+    <ClInclude Include="Lib\ADXL345.h" />
+    <ClInclude Include="Lib\BMP085.h" />
     <ClInclude Include="Lib\def.h" />
+    <ClInclude Include="Lib\HMC5883L.h" />
+    <ClInclude Include="Lib\I2Cdev.h" />
+    <ClInclude Include="Lib\ITG3200.h" />
     <ClInclude Include="Lib\ra8875.h" />
     <ClInclude Include="Lib\ra8875_regs.h" />
-    <ClInclude Include="Lib\SPI.h" />
+    <ClInclude Include="Lib\SPIdev.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

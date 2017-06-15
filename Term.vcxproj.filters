@@ -17,16 +17,49 @@
       <UniqueIdentifier>{aae0cb2f-954a-4565-8796-7e724fbea80c}</UniqueIdentifier>
       <Extensions>*.vgdbsettings</Extensions>
     </Filter>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{f1e45c8c-c5d4-4733-9f3b-60abf5b8270d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\Interface">
+      <UniqueIdentifier>{6d7645ad-8da9-44dd-aa0c-0b730fb2a138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\Devices">
+      <UniqueIdentifier>{4b6252fa-ede9-4892-9961-1a1db556d9b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Term.cpp">
+    <ClCompile Include="main_direct.cpp">
       <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_sdl.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\ADS1x15.cpp">
+      <Filter>Lib\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\ADXL345.cpp">
+      <Filter>Lib\Devices</Filter>
     </ClCompile>
     <ClCompile Include="Lib\ra8875.cpp">
-      <Filter>Source files</Filter>
+      <Filter>Lib\Devices</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\SPI.cpp">
-      <Filter>Source files</Filter>
+    <ClCompile Include="Lib\BMP085.cpp">
+      <Filter>Lib\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\I2Cdev.cpp">
+      <Filter>Lib\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\SPIdev.cpp">
+      <Filter>Lib\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\ITG3200.cpp">
+      <Filter>Lib\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\HMC5883L.cpp">
+      <Filter>Lib\Devices</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,17 +71,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Lib\ADS1x15.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\ADXL345.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
     <ClInclude Include="Lib\ra8875.h">
-      <Filter>Header files</Filter>
+      <Filter>Lib\Devices</Filter>
     </ClInclude>
     <ClInclude Include="Lib\ra8875_regs.h">
-      <Filter>Header files</Filter>
-    </ClInclude>
-    <ClInclude Include="Lib\SPI.h">
-      <Filter>Header files</Filter>
+      <Filter>Lib\Devices</Filter>
     </ClInclude>
     <ClInclude Include="Lib\def.h">
-      <Filter>Header files</Filter>
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\BMP085.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\I2Cdev.h">
+      <Filter>Lib\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\SPIdev.h">
+      <Filter>Lib\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\ITG3200.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\HMC5883L.h">
+      <Filter>Lib\Devices</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

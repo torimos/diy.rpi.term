@@ -1,4 +1,28 @@
-﻿  ra8875.cpp
-  SPI.cpp
-  Term.cpp
+﻿  main.cpp
+  Lib\I2Cdev.h(33):
+  Lib\ADXL345.h(36):
+  main.cpp(3):
+c:\sysgcc\raspberry\bin\..\arm-linux-gnueabihf\sysroot\usr\local\include\bcm2835.h(501): warning :  "HIGH" redefined
+   #define HIGH 0x1
+   ^
+  Lib\def.h(3):
+  Lib\SPIdev.h(2):
+  Lib\ra8875.h(2):
+  main.cpp(1):
+  c:\sysgcc\raspberry\bin\..\arm-linux-gnueabihf\sysroot\usr\local\include\wiringPi.h(67): note :  this is the location of the previous definition
+   #define HIGH    1
+   ^
+  Lib\I2Cdev.h(33):
+  Lib\ADXL345.h(36):
+  main.cpp(3):
+c:\sysgcc\raspberry\bin\..\arm-linux-gnueabihf\sysroot\usr\local\include\bcm2835.h(503): warning :  "LOW" redefined
+   #define LOW  0x0
+   ^
+  Lib\def.h(3):
+  Lib\SPIdev.h(2):
+  Lib\ra8875.h(2):
+  main.cpp(1):
+  c:\sysgcc\raspberry\bin\..\arm-linux-gnueabihf\sysroot\usr\local\include\wiringPi.h(66): note :  this is the location of the previous definition
+   #define LOW    0
+   ^
   Linking VisualGDB/Debug/Term...

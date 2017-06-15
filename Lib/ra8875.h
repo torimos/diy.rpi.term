@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "SPI.h"
+#include "SPIdev.h"
 
 #define RA8875_480x272			0x01
 #define RA8875_800x480			0x02
@@ -24,7 +24,7 @@ enum RA8875LayerModeEnum
 class RA8875
 {
 public:
-	RA8875(SPI* spi, uint32_t resetPin);
+	RA8875(uint8_t spiChannel = 0, uint32_t resetPin = 6);
 	~RA8875();
 
 	void hardReset(void);
@@ -75,13 +75,14 @@ public:
 	uint16_t get_height() { return _height; }
 private:
 	uint32_t _resetPin;
-	SPI* _spi;
+	SPIdev* _spi;
 	uint16_t _width;
 	uint16_t _height;
 	uint8_t _textScale;
 	char _textBuffer[256];
 
 	void writeData(uint8_t data);
+	void writeData(uint8_t* data, uint32_t dataSize);
 	void writeCommand(uint8_t cmd);
 	uint8_t readData(void);
 	uint8_t readStatus(void);
