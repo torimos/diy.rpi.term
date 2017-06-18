@@ -21,7 +21,15 @@ VisualGDB/Debug/ra8875.o: Lib/ra8875.cpp \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\stdio_lim.h \
  c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h \
  c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/string.h \
- c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h \
+ c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/math.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_val.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_valf.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_vall.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\inf.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\nan.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\mathdef.h \
+ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\mathcalls.h
 
 c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/stdc-predef.h:
 
@@ -72,3 +80,19 @@ c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\sys_errlist.h:
 c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/string.h:
 
 c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/xlocale.h:
+
+c:\sysgcc\raspberry\bin\../arm-linux-gnueabihf/sysroot/usr/include/math.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_val.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_valf.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\huge_vall.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\inf.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\nan.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\mathdef.h:
+
+c:\sysgcc\raspberry\arm-linux-gnueabihf\include\bits\mathcalls.h:

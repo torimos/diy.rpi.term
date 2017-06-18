@@ -46,13 +46,14 @@ class SPIdev
 public:
 	SPIdev(uint8_t channel);
 	~SPIdev();
-	bool initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder, SPIClockDividerEnum clockDivider);
+	bool initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder);
 	void deinitialize();
 	int write(uint8_t* data, uint32_t dataSize, bool csChange);
 	uint8_t write8(uint8_t data, bool csChange);
 	uint16_t write16(uint16_t data, bool csChange);
 	void begin();
 	void end();
+	bool setClockDiv(SPIClockDividerEnum clockDivider);
 private:
 	uint8_t _spiChannel;
 	uint8_t _spiCSPin;

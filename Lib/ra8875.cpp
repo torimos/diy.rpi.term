@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include <wiringPi.h>
+
 
 // Command/Data pins for SPI
 #define RA8875_DATAWRITE        0x00
@@ -11,8 +11,8 @@
 #define RA8875_CMDWRITE         0x80
 #define RA8875_CMDREAD          0xC0
 
-#define SPI_HIGH_SPEED 1
-#define SPI_LOW_SPEED 0
+#define DEFAULT_HIGH_SPI_CLOCK SPIClockDividerEnum::CLOCK_DIVIDER_16
+#define DEFAULT_LOW_SPI_CLOCK SPIClockDividerEnum::CLOCK_DIVIDER_1024
 
 RA8875::RA8875(uint8_t spiChannel, uint32_t resetPin)
 {
@@ -88,16 +88,8 @@ uint8_t RA8875::readReg(uint8_t reg)
 	return readData();
 }
 
-bool RA8875::spiInit(uint32_t speed)
-{
-	return _spi->initialize(SPIDataModeEnum::MODE_0, SPIBitSizeOrderEnum::SPI_8BIT_MSB, speed 
-		? SPIClockDividerEnum::CLOCK_DIVIDER_16 
-		: SPIClockDividerEnum::CLOCK_DIVIDER_512);
-}
-
 bool RA8875::PLLinit(void)
 {
-	if (!spiInit(SPI_LOW_SPEED)) return false;
 	uint8_t r = readReg(0);
 	if (r != 0x75)
 		return false;
@@ -107,9 +99,6 @@ bool RA8875::PLLinit(void)
 	delay(1);
 	writeReg(RA8875_PLLC2, RA8875_PLLC2_DIV2);//PLLDIVK[2:0]
 	delay(1);
-
-	if (!spiInit(SPI_HIGH_SPEED)) return false;
-
 	return true;
 }
 
@@ -181,7 +170,7 @@ bool RA8875::initialize(uint8_t mode)
 	}
 
 	hardReset();
-	
+	if (!_spi->initialize(SPIDataModeEnum::MODE_0, SPIBitSizeOrderEnum::SPI_8BIT_MSB)) return false;
 	if (!PLLinit())
 	{
 		return false;
@@ -214,11 +203,13 @@ bool RA8875::initialize(uint8_t mode)
 	setFontSource(RA8875FontSourceEnum::INT_CGROM);
 	selectMemory(RA8875MemoryEnum::Layer1);
 	
-	touchEnable(false);
+	touchEnable(true);
 	
 	PWM1config(true, RA8875_PWM_CLK_DIV1024);
 	PWM1out(255);
 	displayOn(true);
+	
+	_spi->setClockDiv(DEFAULT_HIGH_SPI_CLOCK);
 	return true;
 }
 
@@ -247,6 +238,8 @@ void RA8875::clearMemory(bool full)
 
 void RA8875::setMode(RA8875ModeEnum mode)
 {
+	if (mode == _mode) return;
+	_mode = mode;
 	/* Set text mode */
 	writeCommand(RA8875_MWCR0);
 	uint8_t temp = readData();
@@ -664,7 +657,8 @@ void RA8875::touchEnable(bool on)
 		/* Set Auto Mode      (Reg 0x71) */
 		writeReg(RA8875_TPCR1, RA8875_TPCR1_AUTO |
 			// RA8875_TPCR1_VREFEXT | 
-			RA8875_TPCR1_DEBOUNCE);
+			RA8875_TPCR1_DEBOUNCE
+			);
 		/* Enable TP INT */
 		writeReg(RA8875_INTC1, readReg(RA8875_INTC1) | RA8875_INTC1_TP);
 	}
@@ -687,24 +681,36 @@ bool RA8875::touched(bool clearIntFlag)
 	return r;
 }
 
+#include <math.h>
 bool RA8875::touchRead(uint16_t *x, uint16_t *y)
 {
 	uint16_t tx, ty;
 	uint8_t temp;
+	_spi->setClockDiv(DEFAULT_LOW_SPI_CLOCK);
+	bool touched = readReg(RA8875_INTC2) & RA8875_INTC2_TP;
+	if (touched)
+	{
+		tx = readReg(RA8875_TPXH);
+		ty = readReg(RA8875_TPYH);
+		temp = readReg(RA8875_TPXYL);
+		tx <<= 2;
+		ty <<= 2;
+		tx |= temp & 0x03;        // get the bottom x bits
+		ty |= (temp >> 2) & 0x03; // get the bottom y bits
 
-	tx = readReg(RA8875_TPXH);
-	ty = readReg(RA8875_TPYH);
-	temp = readReg(RA8875_TPXYL);
-	tx <<= 2;
-	ty <<= 2;
-	tx |= temp & 0x03;        // get the bottom x bits
-	ty |= (temp >> 2) & 0x03; // get the bottom y bits
-
-	*x = tx;
-	*y = ty;
-
-	/* Clear TP INT Status */
+		int cty = (ty-120) * 480 / 830.0;
+		if (cty < 0) cty = 0;
+		
+		
+		double xx = sin(cty / (480 / 180.0)*M_PI / 180.0) * 60.0;
+		
+		int ctx = (tx);// * 800 / 1400.0;
+		if (ctx < 0) ctx = 0;
+		
+		*x = ctx;
+		*y = cty;
+	}
 	writeReg(RA8875_INTC2, RA8875_INTC2_TP);
-
-	return true;
+	_spi->setClockDiv(DEFAULT_HIGH_SPI_CLOCK);
+	return touched;
 }

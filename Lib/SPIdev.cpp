@@ -28,9 +28,23 @@ SPIdev::~SPIdev()
 {
 }
 
-bool SPIdev::initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder, SPIClockDividerEnum clockDivider)
+bool SPIdev::setClockDiv(SPIClockDividerEnum clockDivider)
 {
 	_spi_clockDivider = clockDivider;
+#ifdef USE_SPI_DEVICE
+	uint32_t spi_speed = 250000000 / clockDivider;
+	status_value = ioctl(_spiFileHandle, SPI_IOC_WR_MAX_SPEED_HZ, &spi_speed);
+	if (status_value < 0) return false;
+	status_value = ioctl(_spiFileHandle, SPI_IOC_RD_MAX_SPEED_HZ, &spi_speed);
+	if (status_value < 0) return false;
+#elif defined(USE_SPI_BCM2835)
+	bcm2835_spi_setClockDivider(_spi_clockDivider); // The default
+#endif
+	return true;
+}
+
+bool SPIdev::initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder)
+{
 #ifdef USE_SPI_DEVICE
 	int status_value = -1;
 	switch (mode)
@@ -56,7 +70,6 @@ bool SPIdev::initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder,
 			break;
 		}
 	}
-	uint32_t spi_speed = 250000000 / clockDivider;
 	if (_spiChannel == 0)
 	{
 		_spiFileHandle = open(std::string("/dev/spidev0.0").c_str(), O_RDWR);
@@ -77,12 +90,6 @@ bool SPIdev::initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder,
 	if (status_value < 0) return false;
 	
 	status_value = ioctl(_spiFileHandle, SPI_IOC_RD_BITS_PER_WORD, &_spi_bitsPerWord);
-	if (status_value < 0) return false;
-	
-	status_value = ioctl(_spiFileHandle, SPI_IOC_WR_MAX_SPEED_HZ, &spi_speed);
-	if (status_value < 0) return false;
-	
-	status_value = ioctl(_spiFileHandle, SPI_IOC_RD_MAX_SPEED_HZ, &spi_speed);
 	if (status_value < 0) return false;
 	
 #elif defined(USE_SPI_BCM2835)
@@ -140,10 +147,10 @@ bool SPIdev::initialize(SPIDataModeEnum mode, SPIBitSizeOrderEnum bitsSizeOrder,
 	}
 	bcm2835_spi_setBitOrder(_spi_bitsOrder);      // The default
 	bcm2835_spi_setDataMode(_spi_mode);                   // The default
-	bcm2835_spi_setClockDivider(_spi_clockDivider); // The default
 	bcm2835_spi_chipSelect(BCM2835_SPI_CS_NONE);                  // The default
 	bcm2835_gpio_fsel(_spiCSPin, BCM2835_GPIO_FSEL_OUTP);
 #endif
+	if (!setClockDiv(SPIClockDividerEnum::CLOCK_DIVIDER_1024)) return false;
 	return true;
 }
 

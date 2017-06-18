@@ -68,7 +68,6 @@ public:
 
 
 	void touchEnable(bool on);
-	bool touched(bool clearIntFlag);
 	bool touchRead(uint16_t *x, uint16_t *y);
 
 	uint16_t get_width() { return _width; }
@@ -80,7 +79,8 @@ private:
 	uint16_t _height;
 	uint8_t _textScale;
 	char _textBuffer[256];
-
+	RA8875ModeEnum _mode;
+	
 	void writeData(uint8_t data);
 	void writeData(uint8_t* data, uint32_t dataSize);
 	void writeCommand(uint8_t cmd);
@@ -89,6 +89,6 @@ private:
 	void writeReg(uint8_t reg, uint8_t val);
 	void writeReg16(uint8_t reg, uint16_t val);
 	uint8_t readReg(uint8_t reg);
-	bool spiInit(uint32_t speed);
 	bool PLLinit(void);
+	bool touched(bool clearIntFlag);
 };

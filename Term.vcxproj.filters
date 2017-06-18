@@ -61,6 +61,12 @@
     <ClCompile Include="Lib\HMC5883L.cpp">
       <Filter>Lib\Devices</Filter>
     </ClCompile>
+    <ClCompile Include="Lib\MAG3110.cpp">
+      <Filter>Lib\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\BMP280.cpp">
+      <Filter>Lib\Devices</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Term-Debug.vgdbsettings">
@@ -99,6 +105,12 @@
       <Filter>Lib\Devices</Filter>
     </ClInclude>
     <ClInclude Include="Lib\HMC5883L.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\MAG3110.h">
+      <Filter>Lib\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\BMP280.h">
       <Filter>Lib\Devices</Filter>
     </ClInclude>
   </ItemGroup>

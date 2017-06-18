@@ -58,9 +58,11 @@
     <ClCompile Include="Lib\ADS1x15.cpp" />
     <ClCompile Include="Lib\ADXL345.cpp" />
     <ClCompile Include="Lib\BMP085.cpp" />
+    <ClCompile Include="Lib\BMP280.cpp" />
     <ClCompile Include="Lib\HMC5883L.cpp" />
     <ClCompile Include="Lib\I2Cdev.cpp" />
     <ClCompile Include="Lib\ITG3200.cpp" />
+    <ClCompile Include="Lib\MAG3110.cpp" />
     <ClCompile Include="Lib\ra8875.cpp" />
     <ClCompile Include="Lib\SPIdev.cpp" />
     <ClCompile Include="main_direct.cpp" />
@@ -75,10 +77,12 @@
     <ClInclude Include="Lib\ADS1x15.h" />
     <ClInclude Include="Lib\ADXL345.h" />
     <ClInclude Include="Lib\BMP085.h" />
+    <ClInclude Include="Lib\BMP280.h" />
     <ClInclude Include="Lib\def.h" />
     <ClInclude Include="Lib\HMC5883L.h" />
     <ClInclude Include="Lib\I2Cdev.h" />
     <ClInclude Include="Lib\ITG3200.h" />
+    <ClInclude Include="Lib\MAG3110.h" />
     <ClInclude Include="Lib\ra8875.h" />
     <ClInclude Include="Lib\ra8875_regs.h" />
     <ClInclude Include="Lib\SPIdev.h" />
